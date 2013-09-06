@@ -83,11 +83,10 @@ a:hover {
     width:320px;
     height:600px;
     background:#F8F7F2;
-    background: #222 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAFVBM…kElsl5qVFa1iE5f0Pom/CNZdbNM6756lQ41NInMfuFPgAHVEAlGk4lvIAAAAASUVORK5CYII=");
 }
 header{
     height:40px;
-    background:#ff5779;
+    background:#61C28C;
     color:#fff;
     font-size:16px;
     box-shadow:0 2px 10px rgba(0,0,0,0.2);
