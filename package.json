@@ -1,13 +1,13 @@
 {
-	"main": "index.html",
-	"name": "weather-desktop",
-	"description": "weather for desktop by node-webkit",
+	"main": "app/main.html",
+	"name": "yunqi-desktop",
+	"description": "yunqi for desktop by node-webkit",
 	"version": "0.1.0",
-	"keywords": [ "weather", "node-webkit" ],
+	"keywords": [ "yunqi", "node-webkit" ],
 	"window": {
 		"title": "孕期提醒",
 		"icon": "",
-		"toolbar": false,
+		"toolbar": true,
 		"frame": false,
 		"width": 740,
 		"height": 517,
