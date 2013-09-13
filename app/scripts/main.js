@@ -44,7 +44,10 @@ function caculateDueDate(date,period){
         day=day+diff;
     }
     switch(month){
-        case 4,6,9,11:
+        case 4:
+        case 6:
+        case 9:
+        case 11:
             d=30;
         break;
         case 2:
@@ -66,7 +69,6 @@ function caculateDueDate(date,period){
     }
      return year+'-'+month+'-'+day;
 }
-console.log(caculateDueDate('2013-2-24',28),caculateDueDate('2013-6-25',28));
 
 //initialize
 require('./scripts/localize.js');
