@@ -64,7 +64,7 @@ function caculateDueDate(date,period){
             year+=1;
         }
     }
-     return year+'-'+month+'-'+day;
+    return year+'-'+month+'-'+day;
 }
 console.log(caculateDueDate('2013-2-24',28),caculateDueDate('2013-6-25',28));
 
