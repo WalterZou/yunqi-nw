@@ -1,0 +1,31 @@
+.progress
+    .progress-bar
+    .progress-tip 孕<span>#{week}</span>周<span>#{day}</span>天，<span>#{279-cur}</span>天后宝宝出生
+ul.tabs.clearfix
+    if cur<8
+        each val,index in tabs
+            if index<15
+                if index==cur
+                    li(data-id= index,class= 'cur')
+                        = val
+                else
+                    li(data-id= index)
+                        =val 
+    else if cur>271
+            each val,index in tabs
+                if index>264
+                    if index==cur
+                        li(data-id= index,class= 'cur')
+                            = val
+                    else
+                        li(data-id= index)
+                            =val 
+    else
+        each val,index in tabs
+            if Math.abs(index-cur)<8
+                if index==cur
+                    li(data-id= index,class= 'cur')
+                        = val
+                else
+                    li(data-id= index)
+                        = val
