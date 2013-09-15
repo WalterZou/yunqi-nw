@@ -4,11 +4,11 @@
 
 'use strict';
 
-var jade = require('jade'),
-    path = require('path'),
+var jade         = require('jade'),
+    path         = require('path'),
     localStorage = global.localStorage,
-    FileManager = global.getFileManager(),
-    $ = global.jQuery;
+    FileManager  = global.getFileManager(),
+    $            = global.jQuery;
 
 //从localstorage获取提醒数据
 function fetchData(day,week) {
@@ -22,15 +22,15 @@ function fetchData(day,week) {
 
 function renderIndexContent(day) {
     var source = localStorage.getItem('jade-indexContent'),
-        week=parseInt((day)/7),
+        week   = parseInt((day)/7),
         locals = fetchData(day, week),
-        html = jade.render(source, locals);
+        html   = jade.render(source, locals);
     $('#main').html(html);
 }
 
 function initPages(){
-   var today=new Date().getFullYear()+'-'+(new Date().getMonth()+1)+'-'+new Date().getDate(),
-       cal=JSON.parse(localStorage.getItem('cal')),
+   var today = new Date().getFullYear()+'-'+(new Date().getMonth()+1)+'-'+new Date().getDate(),
+       cal   = JSON.parse(localStorage.getItem('cal')),
        curIndex;
     for(var i=0;i<cal.length;i++){
         if(cal[i]==today){
@@ -48,8 +48,8 @@ function initPages(){
 }
 
 function renderIndexTabs(cur,days){
-    var source= localStorage.getItem('jade-indexTabs'),
-        html=jade.render(source,{tabs:days,cur:cur,week:parseInt((cur+1)/7),day:(cur+1)%7});
+    var source = localStorage.getItem('jade-indexTabs'),
+        html   = jade.render(source,{tabs:days,cur:cur,week:parseInt((cur+1)/7),day:(cur+1)%7});
     $('#tabs').html(html);
 }
 

@@ -2,13 +2,13 @@
  *localize.js
  */
 'use strict';
-var fs = require('fs'),
-    path = require('path'),
-    FileManager = global.getFileManager(),
+var fs           = require('fs'),
+    path         = require('path'),
+    FileManager  = global.getFileManager(),
     localStorage = global.localStorage;
 
 function readFile(dataName, callback) {
-    var fpath = path.join(FileManager.appStaticDir, '/js', dataName + '.json'),
+    var fpath  = path.join(FileManager.appStaticDir, '/js', dataName + '.json'),
         buffer = fs.readFileSync(fpath);
     callback(buffer.toString());
 }
@@ -28,19 +28,19 @@ function localizeData() {
 function localizeViews(){
     var files=['indexContent','indexTabs'];
     for( var i in files){
-        var filePath=path.join(FileManager.appViewsDir,files[i]+'.jade'),
-            html=fs.readFileSync(filePath);
+        var filePath = path.join(FileManager.appViewsDir,files[i]+'.jade'),
+            html     = fs.readFileSync(filePath);
         localStorage.setItem('jade-'+files[i],html);
     }
 }
 
 //生成孕期日历
 function pregnancyCal(DueDate){
-    var DD=new Date(DueDate),
-        year=DD.getFullYear(),
-        month=DD.getMonth()+1,
-        day=DD.getDate(),
-        cal=[DueDate];
+    var DD    = new Date(DueDate),
+        year  = DD.getFullYear(),
+        month = DD.getMonth()+1,
+        day   = DD.getDate(),
+        cal   = [DueDate];
      for(var i=1;i<280;i++){
         if(day<=1){
             month-=1;

@@ -112,7 +112,7 @@ header .action-bar a:hover {
     background:#39414d;
     text-decoration:none;
 }
-header .action-bar .close:hover{
+header .action-bar .close:hover {
     background:#c73236;
 }
 .progress {
@@ -123,7 +123,7 @@ header .action-bar .close:hover{
     border-bottom: 1px solid #fff;
     position:relative
 }
-.progress .progress-bar{
+.progress .progress-bar {
     position:absolute;
     top:0;
     left:0;
@@ -132,7 +132,7 @@ header .action-bar .close:hover{
     background-color:#ef6a6c;
     z-index:2;
 }
-.progress .progress-tip{
+.progress .progress-tip {
     position:absolute;
     top:0;
     left:0;
@@ -140,7 +140,7 @@ header .action-bar .close:hover{
     text-align:center;
     z-index:3;
 }
-.progress .progress-tip span{
+.progress .progress-tip span {
     font-size:20px;
     font-weight:bold;
     font-family:Constantia, Georgia;
@@ -148,7 +148,7 @@ header .action-bar .close:hover{
     color:#fff;
     padding:0 3px;
 }
-.tabs li{
+.tabs li {
     float:left;
     cursor:pointer;
     width:45px;
