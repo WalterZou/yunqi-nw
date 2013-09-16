@@ -68,6 +68,9 @@ table {
 .fr {
     float:right
 }
+html,body{
+    height: 100%;
+}
 body {
     font-size:14px;
     font-family:Georgia, 'Microsoft Yahei', 微软黑体, Times New Roman, serif, STHeiti, "华文细黑";
@@ -92,12 +95,17 @@ a:hover {
 	font-style: normal;
 }
 header {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
     height:40px;
     background:-webkit-linear-gradient(top, #5b6874 0%, #3e5162 100%);
     color:#fff;
     font-size:16px;
     border:1px solid rgba(0, 0, 0, 0.3);
     border-radius:3px 3px 0 0;
+    box-sizing:border-box;
     overflow:hidden;
 }
 header .logo {
@@ -126,7 +134,9 @@ header .action-bar .close:hover {
     background:#c73236;
 }
 .wrapper {
-    min-height:600px;
+    height: 100%;
+    box-sizing:border-box;
+    padding-top:40px;
     position:relative;
 }
 .menubar {
