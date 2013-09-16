@@ -70,6 +70,7 @@ table {
 }
 html,body{
     height: 100%;
+    overflow:hidden
 }
 body {
     font-size:14px;
@@ -106,6 +107,8 @@ header {
     border:1px solid rgba(0, 0, 0, 0.3);
     border-radius:3px 3px 0 0;
     box-sizing:border-box;
+    z-index:2;
+    -webkit-user-select:none;
     overflow:hidden;
 }
 header .logo {
@@ -123,7 +126,7 @@ header .action-bar a {
     color:#fff;
     width:40px;
     height:40px;
-    line-height:36px;
+    line-height:32px;
     text-align:center;
 }
 header .action-bar a:hover {
@@ -162,15 +165,15 @@ header .action-bar .close:hover {
     height:38px;
     color:#777f8b;
     cursor:pointer;
-    padding-left:15px;
+    padding-right:15px;
 }
 .menubar .list i,.menubar .list h3 {
     float:left;
     line-height:36px;
 }
 .menubar .list i {
-    margin-right:10px;
-    width:24px;
+    margin:0 10px 0 15px;
+    width:26px;
     height:36px;
     text-align:center;
     font-size:16px;
@@ -179,9 +182,9 @@ header .action-bar .close:hover {
 .menubar .list i img{
     width:24px;
     height:24px;
-    margin-top:7px;
+    margin-top:5px;
     border-radius:24px;
-    box-shadow:1px 1px 1px #fff,-1px -1px 1px #fff;
+    border:2px solid #fff;
     transition:all 0.5s ease;
 }
 .menubar .list li:hover img{
@@ -189,14 +192,11 @@ header .action-bar .close:hover {
 }
 .menubar .list li:hover{
     color:#26ae90;
-    padding-left:10px;
-    border-left:5px solid #26ae90;
+    padding-right:10px;
+    border-right:5px solid #26ae90;
     box-shadow:0 1px 2px rgba(0,0,0,0.3), 0 -1px 1px rgba(0,0,0,0.3)
 }
 .menubar .list .on,.menubar .list .on:hover{
-    height:36px;
-    border-top:1px solid #46746a;
-    border-bottom:1px solid #216f5e;
     background:-webkit-linear-gradient(top,#26ae90 0%,#149c7e 100%);
     color:#fff;
 }
