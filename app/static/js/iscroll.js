@@ -8,7 +8,7 @@
     $.fn.iScroll = function (opt) {
         return this.each(function () {
             var scrollDiv = document.createElement('div');
-            scrollDiv.style.cssText = 'width:6px;height:30px;background:#aaa;border-radius:2px;position:absolute;top:43px;right:2px;z-index:12;display:none;';
+            scrollDiv.style.cssText = 'width:6px;height:30px;background:rgba(0,0,0,0.6);border-radius:2px;position:absolute;top:43px;right:2px;z-index:12;display:none;';
             $(this).after(scrollDiv);
 
             function setScrollbar(elm) {
@@ -27,7 +27,7 @@
                     setScrollbar($(this));
                     _h = $(scrollDiv).height();
                     top = 42 + scollTop * (h - _h) / (H - h);
-                    if (scollTop == (H - h)) {
+                    if (scollTop === (H - h)) {
                         top -= 1;
                     } else if (scollTop === 0) {
                         top = 43;
